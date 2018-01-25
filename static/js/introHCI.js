@@ -17,7 +17,8 @@ $(document).ready(function() {
     if (description.length == 0) {
        $(containingProject).append("<div class='project-description'><p>Description of the project.</p></div>");
     } else {
-       $("a.thumbnail").fadeIn();
+       description.html("<p>Stop clicking on me! You just did it at " + (new Date()) + "</p>");
+       $(".project").fadeOut();
     }
 
 
@@ -31,7 +32,7 @@ function initializePage() {
 
 	});
 	
-	$("a.thumbnail").click(projectClick);
+	$(".project").click(projectClick);
 
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
